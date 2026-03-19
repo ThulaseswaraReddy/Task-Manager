@@ -63,3 +63,7 @@ cd frontend
 npm create vite@latest
 npm run dev
 ```
+## Screenshots
+![Sigup](up.png)
+![Signin](in.png)
+![Dashboard](dashboard.png)
