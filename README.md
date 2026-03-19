@@ -53,6 +53,13 @@ cd Task-Manager
 ```
 bash
 cd backend
+npm init -y
+node/nodemon server
+```
+## 3️⃣Setup Frontend
+```
+bash
+cd frontend
 npm create vite@latest
 npm run dev
 ```
