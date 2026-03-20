@@ -34,8 +34,9 @@ function Dashboard() {
         fetchTasks();
     };
     return (
-        <div className="d-flex justify-content-center mt-5">
-  <div className="card p-4 shadow" style={{ width: "500px" }}>
+        <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+            <div className="d-flex justify-content-center mt-5 flex-grow-1">
+                <div className="card p-4 shadow" style={{ width: "500px" }}>
   <h2 className="mb-3">Dashboard</h2>
 
   <div className="d-flex gap-2 mb-3">
@@ -58,6 +59,14 @@ function Dashboard() {
             </ul>
         </div>
         </div>
+        <footer 
+  className="w-100 text-center py-3"
+  style={{ backgroundColor: "#343a40", color: "white" }}
+>
+  © 2026 Task Manager <br/>
+  <small>Developed by Thulaseswara Reddy</small>
+</footer>
+</div>
     );
 }
 export default Dashboard

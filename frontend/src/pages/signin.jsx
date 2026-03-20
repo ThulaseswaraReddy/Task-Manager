@@ -23,8 +23,9 @@ function Signin() {
       alert("An error occurred while signin.");
     }}
   return (
-     <div className="d-flex justify-content-center align-items-center vh-100">
-      <div className="card p-4 shadow mx-auto" style={{width: "350px"}}>
+    <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
+      <div className="d-flex justify-content-center align-items-center flex-grow-1">
+     <div className="card p-4 shadow" style={{ width: "350px" }}>
         <h2 className="text-center mb-4">Sign In</h2>
         <form onSubmit={signin}>
         <input type="email" className="form-control mb-3" placeholder="Enter your email" onChange={(e)=>setEmail(e.target.value)} required/>
@@ -34,6 +35,13 @@ function Signin() {
          <p   className="text-center mt-3 text-primary"
           style={{cursor:"pointer",textDecoration:"underline"}} onClick={()=>navigate("/")}>New user? Signup</p>
     </div>
+    </div>
+    <footer 
+        className="w-100 text-center py-3"
+        style={{ backgroundColor: "#343a40", color: "white" }}
+      >
+        © 2026 Thulaseswara Reddy | All Rights Reserved
+      </footer>
     </div>
   );
 }
