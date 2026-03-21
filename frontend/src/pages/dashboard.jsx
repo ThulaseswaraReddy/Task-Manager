@@ -7,7 +7,7 @@ function Dashboard() {
     const [tasks,setTasks] = useState([]);
     const userid = localStorage.getItem('userid');
     const fetchTasks=async()=>{
-        const res = await axios.get(`http://localhost:3000/api/tasks/${userid}`);
+        const res = await axios.get(`http://localhost:8080/api/tasks/${userid}`);
         setTasks(res.data);
     };
     useEffect(()=>{
@@ -22,7 +22,7 @@ function Dashboard() {
             alert("Enter task");
             return
         }
-        await axios.post("http://localhost:3000/api/tasks/create",{
+        await axios.post("http://localhost:8080/api/tasks/create",{
             title:task,
             userid
         });
@@ -30,7 +30,7 @@ function Dashboard() {
         fetchTasks();
     };
     const deletetask = async(id)=>{
-        await axios.delete(`http://localhost:3000/api/tasks/delete/${id}`);
+        await axios.delete(`http://localhost:8080/api/tasks/delete/${id}`);
         fetchTasks();
     };
     return (

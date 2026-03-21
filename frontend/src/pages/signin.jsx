@@ -8,7 +8,7 @@ function Signin() {
   const signin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/signin", {
+      const res = await axios.post("http://localhost:8080/api/auth/signin", {
         email,
         password,
       });

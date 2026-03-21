@@ -8,7 +8,7 @@ function Signup() {
   const register = async (e) => {
     e.preventDefault();
     try{
-    const res = await axios.post("http://localhost:3000/api/auth/signup", {
+    const res = await axios.post("http://localhost:8080/api/auth/signup", {
       email,
       password,
     });
